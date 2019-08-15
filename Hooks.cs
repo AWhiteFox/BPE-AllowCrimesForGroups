@@ -22,7 +22,7 @@ using System.Linq;
 using UnityEngine;
 using UniversalUnityHooks;
 
-namespace AllowCrimesForGroups
+namespace BPE_AllowCrimesForGroups
 {
     public class Hooks
     {

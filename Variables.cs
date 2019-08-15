@@ -17,7 +17,7 @@
 
 using System.Collections.Generic;
 
-namespace AllowCrimesForGroups
+namespace BPE_AllowCrimesForGroups
 {
     public class Variables
     {
