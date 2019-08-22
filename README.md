@@ -12,7 +12,7 @@ This example will allow group with name "Robber" bombing and trespassing:
   }
 }
 ```
-*Config file can be found in "Plugins" folder*
+*Config file can be found in "Plugins" folder after first server start*
 
 ## Installation
 
