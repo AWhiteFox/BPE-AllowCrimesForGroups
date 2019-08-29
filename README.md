@@ -7,7 +7,7 @@ A simple addon for [BP: Essentials](https://userr00t.github.io/BP-Essentials/) t
 This example will allow group with name "Robber" bombing and trespassing and contraband for everyone:
 ```json
 {
-  "Groups": {
+  "Permissions": {
       "Robber": [ 11, 15 ],
       "*": [ 5 ]
   }
