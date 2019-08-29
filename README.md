@@ -4,11 +4,12 @@ A simple addon for [BP: Essentials](https://userr00t.github.io/BP-Essentials/) t
 
 ## Configuration
 
-This example will allow group with name "Robber" bombing and trespassing:
+This example will allow group with name "Robber" bombing and trespassing and contraband for everyone:
 ```json
 {
   "Groups": {
-      "Robber": [ 11, 15 ]
+      "Robber": [ 11, 15 ],
+      "*": [ 5 ]
   }
 }
 ```
