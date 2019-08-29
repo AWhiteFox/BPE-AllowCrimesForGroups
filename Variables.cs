@@ -21,6 +21,6 @@ namespace BPE_AllowCrimesForGroups
 {
     public class Variables
     {
-        public Dictionary<string, int[]> Groups { get; set; } = new Dictionary<string, int[]>();
+        public Dictionary<string, byte[]> Permissions { get; set; } = new Dictionary<string, byte[]>();
     }
 }

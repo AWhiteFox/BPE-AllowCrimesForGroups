@@ -48,11 +48,20 @@ namespace BPE_AllowCrimesForGroups
         [Hook("SvPlayer.SvAddCrime")]
         public static bool SvAddCrime(SvPlayer player, ref byte crime, ref ShEntity entity)
         {
-            string group;
-            try { group = BP_Essentials.Variables.Groups.First(x => x.Value.Users.Contains(player.player.username)).Key; }
-            catch (InvalidOperationException) { return false; }
-
-            return Vars.Groups.TryGetValue(group, out int[] allowances) && allowances.Contains(crime);
+            foreach (var group in BP_Essentials.Variables.Groups.Where(x => x.Value.Users.Contains(player.player.username)))
+            {
+                if (IsAllowedForGroup(group.Key, crime) || IsAllowedForEveryone(crime))
+                {
+                    return true;
+                }
+            }
+            return false;
         }
+
+        public static bool IsAllowedForGroup(string group, byte crime) =>
+            Vars.Permissions.TryGetValue(group, out byte[] x) && x.Contains(crime);
+
+        public static bool IsAllowedForEveryone(byte crime) =>
+            Vars.Permissions.TryGetValue("*", out byte[] x) && x.Contains(crime);
     }
 }
